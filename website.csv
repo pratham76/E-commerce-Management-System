@@ -1,0 +1,10 @@
+﻿websiteID,website_address,customerID,productID
+web_001,www.myntra.com,USR_010,p_02
+web_002,www.amazon.com,USR_012,p_06
+web_003,www.flipcart.com,USR_003,p_05
+web_004,www.zstore.com,USR_015,p_01
+web_005,www.maxstore.com,USR_017,p_02
+web_006,www.fbb.com,USR_018,p_03
+web_007,www.h&m.com,USR_001,p_04
+web_008,www.allensolly.com,USR_004,p_05
+web_009,www.zara.com,USR_019,p_06

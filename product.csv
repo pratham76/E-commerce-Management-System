@@ -1,0 +1,7 @@
+﻿product_id,product_name,type,color,size,cost
+p_01,Blue_tshirt,shirt,blue,S ,499
+p_02,black_tshit,shirt,black,S,599
+p_03,green_shirt,shirt,green,M,1199
+p_04,yellow_jacket,jacket,yellow,L,2299
+p_05,black_trousers,trousers,black,M,899
+p_06,red_shirt,shirt,red,L,799

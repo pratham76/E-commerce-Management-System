@@ -1,0 +1,20 @@
+﻿Customer_id,username,password,F_Name,L_Name ,Email,Address,PinCode,Phone_number,Payment_id,cart_id
+USR_001,Ajit,A@123,Ajit,Ullal,Ajit.Ullal@gmail.com,"10, Janpath",560001,3816958050,p_07,c_01
+USR_002,Ali,A@1234,Muhammed ,Ali,Muhammed.Ali@gmail.com,"10 Downing",560003,4231847857,p_05,c_02
+USR_003,Deepak,D@1234,Sai Deepak,Reddy,SaiDeepak.Reddy@gmail.com,"14 Kailsh Marg",600001,6570774843,p_01,c_03
+USR_004,Rudra,R@123,Rudra,Agarwal,Rudra.Agarwal@gmail.com,"5 Lohia Garden",600042,6496570681,p_03,c_04
+USR_005,Rahul,R@1234,Rahul,Khanna,Rahul.Khanna@gmail.com,"1 Pink Street",600067,7425133771,p_06,c_05
+USR_006,Nirmala,N@123,Nirmala,Seturaman,Nirmala.Seturaman@gmail.com"3 Blue Avenue",560105,4758964089,p_04,c_06
+USR_007,Smriti,S@123,Smriti,Irani,Smriti.Irani@gmail.com,"4 Banyan Avenie",575014,6461137242,p_045,c_07
+USR_008,Ajit1,A@043,Ajit,Sethi,Ajit.Sethi@gmail.com,"6 Poes Garden",575001,1360250412,p_08,c_08
+USR_009,Arjun,A@0435,Arjun,Allu,Arjun.Allu@gmail.com,"7 Dhamaka street",575020,2882164015,p_039,c_09
+USR_010,Samanta,S@043,Samanta,Prabhu,Samanta.Prabhu@gmail.com,"8 Clone Colony",600042,9049771843,p_02,c_10
+USR_011,Kiran ,K@043,Kiran ,Bedi,Kiran .Bedi@gmail.com,"56, Brigade Road",560003,7473996070,p_036,c_11
+USR_012,Rahul 1,R@12348,Rahul ,Gandhi,Rahul .Gandhi@gmail.com,Mirza road,475001,3390002752,p_09,c_12
+USR_013,Rashkit ,R@0438,Rashkit ,Shetty,Rashkit .Shetty@gmail.com,JC Road,560009,2004741304,p_052,c_13
+USR_014,Rishi,R@0438,Rishi,Sunak,Rishi.Sunak@gmail.com,Anna Sali,600034,9700179138,p_041,c_14
+USR_015,Vedavalli,V@043,Vedavalli,Srinath,Vedavalli.Srinath@gmail.com,"Church Street Bangalore",560054,6887094275,p_030,c_15
+USR_016,Subbu,S@0438,Subbu,Saravana,Subbu.Saravana@gmail.com,American Street,600043,7924300460,p_046,c_16
+USR_017,Sheela,S@04389,Sheela,Dixit,Sheela.Dixit@gmail.com,Kasturba Road,560048,4042496048,p_032,c_17
+USR_018,Margaret,M@043,Margaret,Alva,Margaret.Alva@gmail.com,New BEL Road,560008,6722757665,p_89,c_18
+USR_019,Arun,A@04384,Arun,Kumar,Arun.Kumar@gmail.com,Mint Street,600046,5350962878,p_067,c_19

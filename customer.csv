@@ -1,0 +1,20 @@
+﻿Customer_id,username,password,F_Name,L_Name ,Email,Address,PinCode,Phone_number,payment_id,cart_id
+USR_001,  Ajit,A@123,  Ajit,Ullal,  Ajit.Ullal@gmail.com,10Janpath,560001,8850349451,12763,c_01
+USR_002,Ali,A@1234,Muhammed ,Ali,Muhammed .Ali@gmail.com,10Downing,560003,6777314232,20850,c_02
+USR_003,Deepak,D@1234,Sai Deepak,Reddy,Sai Deepak.Reddy@gmail.com,14 Kailsh Marg,600001,7665705093,26785,c_03
+USR_004,Rudra,R@123,Rudra,Agarwal,Rudra.Agarwal@gmail.com,5Lohia Garden,600042,7746313919,27205,c_04
+USR_005,Rahul,R@1234,Rahul,Khanna,Rahul.Khanna@gmail.com,1Pink Street,600067,7974037347,29706,c_05
+USR_006,Nirmala,N@123,Nirmala,Seturaman,Nirmala.Seturaman@gmail.com,3Blue Avenue,560105,3118951142,31888,c_06
+USR_007,Smriti,S@123,Smriti,Irani,Smriti.Irani@gmail.com,4 Banyan Avenie,575014,5771863847,37625,c_07
+USR_008,Ajit1,A@043,Ajit,Sethi,Ajit.Sethi@gmail.com,6 Poes Garden,575001,3310671964,40522,c_08
+USR_009,Arjun,A@0435,Arjun,Allu,Arjun.Allu@gmail.com,7 Dhamaka street,575020,3523168377,47628,c_09
+USR_010,Samanta,S@043,Samanta,Prabhu,Samanta.Prabhu@gmail.com,8Clone Colony,600042,8199251147,49136,c_10
+USR_011,Kiran ,K@043,Kiran ,Bedi,Kiran .Bedi@gmail.com,56 Brigade Road,560003,1336497282,51809,c_11
+USR_012,Rahul 1,R@12348,Rahul ,Gandhi,Rahul .Gandhi@gmail.com,Mirza road,475001,1798290957,54260,c_12
+USR_013,Rashkit ,R@0438,Rashkit ,Shetty,Rashkit .Shetty@gmail.com,JC Road,560009,5382230986,61544,c_13
+USR_014,Rishi,R@0438,Rishi,Sunak,Rishi.Sunak@gmail.com,Anna Sali,600034,9974903472,69723,c_14
+USR_015,Vedavalli,V@043,Vedavalli,Srinath,Vedavalli.Srinath@gmail.com,Church Street  Bangalore,560054,7853132419,72876,c_15
+USR_016,Subbu,S@0438,Subbu,Saravana,Subbu.Saravana@gmail.com,American Street,600043,3974013503,72957,c_16
+USR_017,Sheela,S@04389,Sheela,Dixit,Sheela.Dixit@gmail.com,Kasturba Road,560048,6729601425,73469,c_17
+USR_018,Margaret,M@043,Margaret,Alva,Margaret.Alva@gmail.com,New BEL Road,560008,7862147823,87036,c_18
+USR_019,Arun,A@04384,Arun,Kumar,Arun.Kumar@gmail.com,Mint Street,600046,3563529543,99218,c_19

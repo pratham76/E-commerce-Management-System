@@ -1,0 +1,296 @@
+CREATE TABLE Cart
+    (
+        Cart_id VARCHAR(7) NOT NULL,
+        totalcost double,
+        PRIMARY KEY(Cart_id)
+    );
+
+CREATE TABLE Cart_Item
+    (
+        quantity int,
+        totalcost double,
+        itemid varchar(10) NOT NULL
+    );
+
+
+ CREATE TABLE Payment
+    (
+        payment_id VARCHAR(7) NOT NULL,
+        payment_date DATE NOT NULL,
+        Payment_type VARCHAR(10) NOT NULL,       
+        total_amount double,
+        primary key(payment_id)
+    );
+
+    CREATE TABLE Customer
+    (
+        Customer_id VARCHAR(6) NOT NULL,
+        username VARCHAR(10) NOT NULL,
+        password VARCHAR(5) NOT NULL,
+        F_Name VARCHAR(20) NOT NULL,
+        L_Name VARCHAR(20) NOT NULL,
+        Email varchar(30),
+        Address VARCHAR(20) NOT NULL,
+        Pincode int NOT NULL,
+        Phone_number long NOT NULL,
+        PRIMARY KEY (Customer_id)
+        
+    );
+
+
+    CREATE TABLE Product
+    (
+        Product_id VARCHAR(7) NOT NULL,
+        product_name varchar(20) NOT NULL,
+        Type VARCHAR(7) NOT NULL,
+        Color VARCHAR(15) NOT NULL,
+        size VARCHAR(2) NOT NULL,
+        Cost int NOT NULL,
+        PRIMARY KEY (Product_id)
+       
+    );
+
+    CREATE TABLE website
+    (
+         websiteID varchar(20),
+         website_address varchar(30) NOT NULL,
+         primary key(websiteID)
+
+    );
+    
+
+alter table customer add cart_id varchar(7);
+alter table customer add payment_id varchar(7);
+alter table website add customerID varchar(20);
+alter table website add productID varchar(20);
+alter table cart_item add cart_id varchar(7);
+
+ INSERT INTO  customer VALUES("USR_001","Ajit","A@123","Ajit","Ullal","Ajit.Ullal@gmail.com","10 Janpath",560001,3816958050,"p_07","c_01"),
+    -> ("USR_002","Ali","A@1234","Muhammed ","Ali","Muhammed.Ali@gmail.com","10 Downing",560003,4231847857,"p_05","c_02"),
+    -> ("USR_003","Deepak","D@1234","Sai Deepak","Reddy","SaiDeepak.Reddy@gmail.com","14 Kailsh Marg",600001,6570774843,"p_01","c_03"),
+    -> ("USR_004","Rudra","R@123","Rudra","Agarwal","Rudra.Agarwal@gmail.com","5 Lohia Garden",600042,6496570681,"p_03","c_04"),
+    -> ("USR_005","Rahul","R@1234","Rahul","Khanna","Rahul.Khanna@gmail.com","1 Pink Street",600067,7425133771,"p_06","c_05"),
+    -> ("USR_006","Nirmala","N@123","Nirmala","Seturaman","Nirmala.Seturaman@gmail.com","3 Blue Avenue",560105,4758964089,"p_04","c_06"),
+    -> ("USR_007","Smriti","S@123","Smriti","Irani","Smriti.Irani@gmail.com","4 Banyan Avenie",575014,6461137242,"p_045","c_07"),
+    -> ("USR_008","Ajit1","A@043","Ajit","Sethi","Ajit.Sethi@gmail.com","6 Poes Garden",575001,1360250412,"p_08","c_08"),
+    -> ("USR_009","Arjun","A@0435","Arjun","Allu","Arjun.Allu@gmail.com","7 Dhamaka street",575020,2882164015,"p_039","c_09"),
+    -> ("USR_010","Samanta","S@043","Samanta","Prabhu","Samanta.Prabhu@gmail.com","8 Clone Colony",600042,9049771843,"p_02","c_10"),
+    -> ("USR_011","Kiran ","K@043","Kiran ","Bedi","Kiran .Bedi@gmail.com","56 Brigade Road",560003,7473996070,"p_036","c_11"),
+    -> ("USR_012","Rahul 1","R@12348","Rahul ","Gandhi","Rahul .Gandhi@gmail.com","Mirza road",475001,3390002752,"p_09","c_12"),
+    -> ("USR_013","Rashkit ","R@0438","Rashkit ","Shetty","Rashkit .Shetty@gmail.com","JC Road",560009,2004741304,"p_052","c_13"),
+    -> ("USR_014","Rishi","R@0438","Rishi","Sunak","Rishi.Sunak@gmail.com","Anna Sali",600034,9700179138,"p_041","c_14"),
+    -> ("USR_015","Vedavalli","V@043","Vedavalli","Srinath","Vedavalli.Srinath@gmail.com","Church Street Bangalore",560054,6887094275,"p_030","c_15"),
+    -> ("USR_016","Subbu","S@0438","Subbu","Saravana","Subbu.Saravana@gmail.com","American Street",600043,7924300460,"p_046","c_16"),
+    -> ("USR_017","Sheela","S@04389","Sheela","Dixit","Sheela.Dixit@gmail.com","Kasturba Road",560048,4042496048,"p_032","c_17"),
+    -> ("USR_018","Margaret","M@043","Margaret","Alva","Margaret.Alva@gmail.com","New BEL Road",560008,6722757665,"p_89","c_18"),
+    -> ("USR_019","Arun","A@04384","Arun","Kumar","Arun.Kumar@gmail.com","Mint Street",600046,5350962878,"p_067","c_19");
+****************
+
+    CREATE TABLE Seller
+    (
+        Seller_id VARCHAR(6) NOT NULL,
+        s_pass VARCHAR(10) NOT NULL,
+        Name VARCHAR(20) NOT NULL,
+        Address VARCHAR(10) NOT NULL,
+        PRIMARY KEY (Seller_id)
+    );
+
+    CREATE TABLE Seller_Phone_num
+    (
+        Phone_num NUMBER(10) NOT NULL,
+        Seller_id VARCHAR(6) NOT NULL,
+        PRIMARY KEY (Phone_num, Seller_id),
+        FOREIGN KEY (Seller_id) REFERENCES Seller(Seller_id)
+        ON DELETE CASCADE
+    );
+
+    CREATE TABLE Payment
+    (
+        payment_id VARCHAR(7) NOT NULL,
+        payment_date DATE NOT NULL,
+        Payment_type VARCHAR(10) NOT NULL,
+        Customer_id VARCHAR(6) NOT NULL,
+        Cart_id VARCHAR(7) NOT NULL,
+        PRIMARY KEY (payment_id),
+        FOREIGN KEY (Customer_id) REFERENCES Customer(Customer_id),
+        FOREIGN KEY (Cart_id) REFERENCES Cart(Cart_id),
+        total_amount numeric(6)
+    );
+
+    CREATE TABLE Product
+    (
+        Product_id VARCHAR(7) NOT NULL,
+        Type VARCHAR(7) NOT NULL,
+        Color VARCHAR(15) NOT NULL,
+        P_Size VARCHAR(2) NOT NULL,
+        Gender CHAR(1) NOT NULL,
+        Commission NUMBER(2) NOT NULL,
+        Cost NUMBER(5) NOT NULL,
+        Quantity NUMBER(2) NOT NULL,
+        Seller_id VARCHAR(6),
+        PRIMARY KEY (Product_id),
+        FOREIGN KEY (Seller_id) REFERENCES Seller(Seller_id)
+        ON DELETE SET NULL
+    );
+
+    CREATE TABLE Cart_item
+    (
+        Quantity_wished NUMBER(1) NOT NULL,
+        Date_Added DATE NOT NULL,
+        Cart_id VARCHAR(7) NOT NULL,
+        Product_id VARCHAR(7) NOT NULL,
+        FOREIGN KEY (Cart_id) REFERENCES Cart(Cart_id),
+        FOREIGN KEY (Product_id) REFERENCES Product(Product_id),
+        Primary key(Cart_id,Product_id)
+    );
+
+    alter table Cart_item add purchased varchar(3) default 'NO';
+3.2 Inserting Values
+These are some demo values. Full data will be updated in future commits
+
+    insert into Cart values('crt1011');
+
+    insert into Customer values('cid100','ABCM1235','rajat','G-453','632014',9893135876, 'crt1011');
+
+    insert into Seller values('sid100','12345','aman','delhi cmc');
+
+    insert into Product values('pid1001','jeans','red','32','M',10,10005,20,'sid100');
+
+    insert into Seller_Phone_num values('9943336206','sid100');
+
+    insert into Cart_item values(3,to_date('10-OCT-1999','dd-mon-yyyy'),'crt1011','pid1001','Y');
+
+    insert into Payment values('pmt1001',to_date('10-OCT-1999','dd-mon-yyyy'),'online','cid100','crt1011',NULL);
+4. Queries
+4.1 Basic Queries
+If the customer wants to see details of product present in the cart
+    select * from product where product_id in(
+        select product_id from Cart_item where (Cart_id in (
+            select Cart_id from Customer where Customer_id='cid100'
+        ))
+    and purchased='NO');
+If a customer wants to see order history
+    select product_id,Quantity_wished from Cart_item where (purchased='Y' and Cart_id in (select Cart_id from customer where Customer_id='cid101'));
+Customer wants to see filtered products on the basis of size,gender,type
+    select product_id, color, cost, seller_id from product where (type='jeans' and p_size='32' and gender='F' and quantity>0)
+If customer wants to modify the cart
+    delete from cart_item where (product_id='pid1001' and Cart_id in (select cart_id from Customer where Customer_id='cid100'));
+If a seller stops selling his product
+    delete  from seller where seller_id = 'sid100';
+    update product set quantity = 00 where seller_id is NULL;
+If admin want to see what are the product purchased on the particular date
+    select product_id from cart_item where (purchased='Y' and date_added='12-dec-2018');
+How much product sold on the particular date
+    select count(product_id) count_pid,date_added from Cart_item where purchased='Y'  group by(date_added);
+If a customer want to know the total price present in the cart
+    select sum(quantity_wished * cost) total_payable from product p join cart_item c on p.product_id=c.product_id where c.product_id in (select product_id from cart_item where cart_id in(select Cart_id from customer where customer_id='cid101') and purchased=’Y’);
+Show the details of the customer who has not purchased any thing
+    Select * from customer where customer_id not in (select customer_id from Payment);
+Find total profit of the website from sales.
+    select sum(quantity_wished * cost * commission/100) total_profit from product p join cart_item c on p.product_id=c.product_id where purchased=’Y’;
+4.2 PL/SQL function
+Procedure which returns the type of product with the cost less than the given cost
+    create or replace procedure cost_filter(c in number,t in varchar)
+    is
+    cs product.cost%type;
+    ty product.type%type;
+    id product.product_id%type;
+    cursor cf is
+    select product_id,cost,type from product where cost<c and type=t;
+    begin
+    open cf;
+    loop
+    fetch cf into id,cs,ty;
+    exit when cf%notfound;
+    dbms_output.put_line('Product' || id || 'has cost ' || cs || ' and the type is' || ty);
+    end loop;
+    close cf;
+    exception
+    when no_data_found then
+    dbms_output.put_line('Sorry no such products exist');
+    end;
+Function which returns total number of products which a particular seller sells
+    create or replace function totalProducts(sId in varchar)
+    return number
+    is
+    total number(2):=0;
+    begin
+    select count(*) into total
+    from product
+    where seller_id=sId;
+    return total;
+    end;
+    /
+Function execution:
+
+    declare
+    c number(2);
+    begin
+    c:=totalProducts('sid102');
+    dbms_output.put_line('Total products is : '|| c);
+    end;
+Procedure which returns the total quantity of product with the given ID
+Procedure with exception handling
+
+    create or replace procedure prod_details(p_id in varchar)
+    is
+    quan number(2);
+    begin
+    select quantity into quan from product where product_id=p_id;
+    exception
+    when no_data_found then
+    dbms_output.put_line('Sorry no such product exist !!');
+    end;
+    /
+4.3 Triggers
+Trigger that will execute before inserting new customer to database and inserting a new cartId to the cart_items table
+Function to count number of cart items
+
+    create or replace function numCartId(cd in varchar)
+    return number
+    is
+    total number(2):=0;
+    begin
+    select count(*) into total
+    from cart_item
+    where cart_id=cd;
+    return total;
+    end;
+    Trigger
+    Create or replace trigger before_customer
+    before insert
+    on
+    customer
+    for each row
+    declare
+    c varchar(10);
+    n number(2);
+    begin
+    c:= :new.cart_id;
+    n:=numCartId(c);
+    if n>0 then
+    dbms_output.put_line('Sorry');
+    end if;
+    insert into cart values(c);
+    end;
+Trigger to update the total amount of user everytime he adds something to payment table
+    create or replace function total_cost(cId in varchar)
+    return number
+    is
+    total number(2) :=0;
+    begin
+    select sum(cost) into total from product,cart_item where product.product_id=cart_item.product_id and cart_id=cId;
+    return total;
+    end;
+
+    create or replace trigger before_pay_up
+    before insert
+    on
+    payment
+    for each row
+    declare
+    total number(3);
+    begin
+    total :=total_cost(:new.cart_id);
+    insert into payment values(:new.payment_id,:new.payment_date,:new.payment_type,:new.customer_id,:new.cart_id,total);
+    end;
